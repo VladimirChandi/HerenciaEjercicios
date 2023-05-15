@@ -1,0 +1,84 @@
+// Definición de la interface Puerta
+interface Puerta {
+    void abrir();
+    void cerrar();
+}
+
+// Definición de la interface PuertaBloqueable, derivada de Puerta
+interface PuertaBloqueable extends Puerta {
+    void bloquear();
+    void desbloquear();
+}
+
+// Definición de la interface Alarma
+interface Alarma {
+    boolean alarmaActivada();
+    void activarAlarma();
+    void desactivarAlarma();
+}
+
+// Definición de la clase ComponenteDeCoche
+class ComponenteDeCoche {
+    String descripcion;
+    double peso;
+    double coste;
+    
+    void mostrarAtributos() {
+        // Mostrar los atributos de la clase ComponenteDeCoche
+    }
+}
+
+// Definición de la clase PuertaCoche, que extiende ComponenteDeCoche e implementa PuertaBloqueable y Alarma
+class PuertaCoche extends ComponenteDeCoche implements PuertaBloqueable, Alarma {
+    boolean estaBloqueada;
+    
+    @Override
+    void abrir() {
+        // Lógica para abrir la puerta
+    }
+    
+    @Override
+    void cerrar() {
+        // Lógica para cerrar la puerta
+    }
+    
+    @Override
+    void bloquear() {
+        // Lógica para bloquear la puerta
+    }
+    
+    @Override
+    void desbloquear() {
+        // Lógica para desbloquear la puerta
+    }
+    
+    @Override
+    boolean alarmaActivada() {
+        // Lógica para verificar si la alarma está activada
+        return false;
+    }
+    
+    @Override
+    void activarAlarma() {
+        // Lógica para activar la alarma
+    }
+    
+    @Override
+    void desactivarAlarma() {
+        // Lógica para desactivar la alarma
+    }
+}
+
+// Programa de prueba
+public class Main {
+    public static void main(String[] args) {
+        PuertaCoche puerta = new PuertaCoche();
+        puerta.mostrarAtributos();
+        puerta.abrir();
+        puerta.cerrar();
+        puerta.bloquear();
+        puerta.desbloquear();
+        puerta.activarAlarma();
+        puerta.desactivarAlarma();
+    }
+}
